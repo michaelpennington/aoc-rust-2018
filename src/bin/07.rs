@@ -104,9 +104,6 @@ impl Requirements {
         let mut done: Vec<Step> = Vec::with_capacity(26);
         let mut workers = Workers::default();
         for time in 0.. {
-            if done.len() == self.len {
-                return time - 1;
-            }
             for worker in workers.0.iter_mut() {
                 if let Some(w) = worker {
                     let res = w.step();
@@ -143,6 +140,9 @@ impl Requirements {
                 } else {
                     break;
                 }
+            }
+            if done.len() == self.len {
+                return time;
             }
         }
         0
