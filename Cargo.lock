@@ -24,6 +24,7 @@ dependencies = [
  "anyhow",
  "chrono",
  "dhat",
+ "num-traits",
  "pico-args",
  "strum",
  "tinyjson",
