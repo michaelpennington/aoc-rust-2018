@@ -22,10 +22,12 @@ name = "advent_of_code"
 version = "0.11.0"
 dependencies = [
  "anyhow",
+ "bitflags",
  "chrono",
  "dhat",
  "num-traits",
  "pico-args",
+ "smallvec",
  "strum",
  "tinyjson",
 ]
